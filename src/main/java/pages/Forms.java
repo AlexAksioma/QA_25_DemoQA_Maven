@@ -6,20 +6,17 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
-public class HomePage extends BasePage{
-
-    public HomePage(WebDriver driver){
+public class Forms extends BasePage{
+    public Forms(WebDriver driver){
         setDriver(driver);
-        driver.get("https://demoqa.com/");
         PageFactory.initElements
                 (new AjaxElementLocatorFactory(driver, 10), this);
     }
-    @FindBy(xpath = "//div[@class='category-cards']/div[2]")
-    WebElement buttonForms;
+    @FindBy(xpath = "//span[text()='Practice Form']")
+    WebElement btnPracticeForm;
 
-    public Forms clickButtonForms(){
-        buttonForms.click();
-        return new Forms(driver);
+    public AutomationPracticeForm clickBtnPracticeForm(){
+        btnPracticeForm.click();
+        return new AutomationPracticeForm(driver);
     }
-
 }
