@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64a2293-7197-40b5-8ccd-7824359231ff" name="Changes" comment="added exctentions, dto, pages">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Gender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormTests.java" afterDir="false" />
+    <list default="true" id="b64a2293-7197-40b5-8ccd-7824359231ff" name="Changes" comment="added js, enum class, fill student form method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/StudentLombok.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Hobbies.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/StudentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/StudentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AutomationPracticeForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AutomationPracticeFormPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Forms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FormsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AutomationPracticeFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AutomationPracticeFormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +46,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_trello"
+    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_DemoQA_Maven"
   }
 }]]></component>
   <component name="RunManager" selected="TestNG.AutomationPracticeFormTests.automationPracticeFormPositiveTest">
@@ -143,13 +140,22 @@
       <option name="project" value="LOCAL" />
       <updated>1714502398651</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added js, enum class, fill student form method">
+      <option name="closed" value="true" />
+      <created>1715539488176</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715539488176</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created exception" />
     <MESSAGE value="created project" />
     <MESSAGE value="added exctentions, dto, pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added exctentions, dto, pages" />
+    <MESSAGE value="added js, enum class, fill student form method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added js, enum class, fill student form method" />
   </component>
 </project>
