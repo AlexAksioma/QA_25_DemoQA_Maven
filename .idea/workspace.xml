@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64a2293-7197-40b5-8ccd-7824359231ff" name="Changes" comment="added js, enum class, fill student form method">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/StudentLombok.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/enums/Hobbies.java" afterDir="false" />
+    <list default="true" id="b64a2293-7197-40b5-8ccd-7824359231ff" name="Changes" comment="added student lombok, hobby, date">
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/StateCity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/StudentLombok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/StudentLombok.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/AutomationPracticeFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AutomationPracticeFormPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AutomationPracticeFormTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +38,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_25/QA_25_DemoQA_Maven"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/QA_Auto_Projects/QA_25/QA_25_DemoQA_Maven&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="TestNG.AutomationPracticeFormTests.automationPracticeFormPositiveTest">
+}</component>
+  <component name="RunManager" selected="TestNG.AutomationPracticeFormTests.automationPracticeFormPositiveTest_equalsStudent">
     <configuration name="ExceptionClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exceptions.ExceptionClass" />
       <module name="QA_25_DemoQA_Maven" />
@@ -81,6 +79,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AutomationPracticeFormTests.automationPracticeFormPositiveTest_equalsStudent" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="QA_25_DemoQA_Maven" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AutomationPracticeFormTests" />
+      <option name="METHOD_NAME" value="automationPracticeFormPositiveTest_equalsStudent" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomeTests.test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="QA_25_DemoQA_Maven" />
       <extension name="coverage">
@@ -101,6 +117,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AutomationPracticeFormTests.automationPracticeFormPositiveTest_equalsStudent" />
         <item itemvalue="TestNG.AutomationPracticeFormTests.automationPracticeFormPositiveTest" />
         <item itemvalue="TestNG.HomeTests.test" />
         <item itemvalue="Application.ExceptionClass" />
@@ -148,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715539488176</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added student lombok, hobby, date">
+      <option name="closed" value="true" />
+      <created>1716144904101</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716144904101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,6 +181,7 @@
     <MESSAGE value="created project" />
     <MESSAGE value="added exctentions, dto, pages" />
     <MESSAGE value="added js, enum class, fill student form method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added js, enum class, fill student form method" />
+    <MESSAGE value="added student lombok, hobby, date" />
+    <option name="LAST_COMMIT_MESSAGE" value="added student lombok, hobby, date" />
   </component>
 </project>

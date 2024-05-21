@@ -33,6 +33,38 @@ public class AutomationPracticeFormPage extends BasePage {
     WebElement fieldDateOfBirth;
     @FindBy(id = "subjectsInput")
     WebElement fieldSubjects;
+    @FindBy(xpath = "//textarea[@placeholder='Current Address']")
+    WebElement fieldCurrentAddress;
+    @FindBy(id = "react-select-3-input")
+    WebElement fieldState;
+    @FindBy(id = "react-select-4-input")
+    WebElement fieldCity;
+    @FindBy(id = "submit")
+    WebElement btnSubmit;
+
+    @FindBy(id = "example-modal-sizes-title-lg")
+    WebElement textThanksFor;
+    //====================================================
+    //elements modal body
+    @FindBy(xpath = "//tbody/tr[1]/td[2]")
+    WebElement modalBodyNameLastName;
+    @FindBy(xpath = "//tbody/tr[2]/td[2]")
+    WebElement modalBodyEmail;
+    @FindBy(xpath = "//tbody/tr[3]/td[2]")
+    WebElement modalBodyGender;
+    @FindBy(xpath = "//tbody/tr[4]/td[2]")
+    WebElement modalBodyMobile;
+    @FindBy(xpath = "//tbody/tr[5]/td[2]")
+    WebElement modalBodyDateOfBirth;
+    @FindBy(xpath = "//tbody/tr[6]/td[2]")
+    WebElement modalBodySubjects;
+    @FindBy(xpath = "//tbody/tr[7]/td[2]")
+    WebElement modalBodyHobbies;
+    @FindBy(xpath = "//tbody/tr[9]/td[2]")
+    WebElement modalBodyAddress;
+    @FindBy(xpath = "//tbody/tr[10]/td[2]")
+    WebElement modalBodyStateCity;
+
 
     public AutomationPracticeFormPage fillStudentForm(StudentLombok student) {
         hideFooter();
@@ -46,12 +78,27 @@ public class AutomationPracticeFormPage extends BasePage {
         typeDateOfBirth(student.getDateOfBirth());
         typeSubjects(student.getSubjects());
         typeHobbies(student.getHobbies());
+        //=============================================
+        fieldCurrentAddress.sendKeys(student.getCurrentAddress());
+        fieldState.sendKeys(student.getState());
+        fieldState.sendKeys(Keys.ENTER);
+        fieldCity.sendKeys(student.getCity());
+        fieldCity.sendKeys(Keys.ENTER);
         return this;
     }
 
+    public AutomationPracticeFormPage clickBtnSubmitPositive() {
+        btnSubmit.click();
+        return this;
+    }
+
+    public boolean isElementPresent_textThanks() {
+        return textThanksFor.isDisplayed();
+    }
+
     private void typeHobbies(List<Hobbies> hobbiesList) {
-        for (Hobbies h:hobbiesList) {
-            switch (h){
+        for (Hobbies h : hobbiesList) {
+            switch (h) {
                 case SPORTS:
                     driver.findElement(By.xpath(h.getLocator())).click();
                     break;
@@ -66,9 +113,9 @@ public class AutomationPracticeFormPage extends BasePage {
     }
 
     private void typeSubjects(String subjects) {
-        String [] splitArray = subjects.split(",");
+        String[] splitArray = subjects.split(", ");
         fieldSubjects.click();
-        for (String sub: splitArray) {
+        for (String sub : splitArray) {
             fieldSubjects.sendKeys(sub);
             fieldSubjects.sendKeys(Keys.ENTER);
         }
@@ -80,7 +127,7 @@ public class AutomationPracticeFormPage extends BasePage {
         System.out.println("OS --> " + operationSystem);
         if (operationSystem.startsWith("Win"))
             fieldDateOfBirth.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-        else if(operationSystem.startsWith("Mac"))
+        else if (operationSystem.startsWith("Mac"))
             fieldDateOfBirth.sendKeys(Keys.chord(Keys.COMMAND, "a"));
         fieldDateOfBirth.sendKeys(dateOfBirth);
         fieldDateOfBirth.sendKeys(Keys.ENTER);
@@ -89,5 +136,54 @@ public class AutomationPracticeFormPage extends BasePage {
     private void clickGender(Gender gender) {
         WebElement elementGender = driver.findElement(By.xpath(gender.getLocator()));
         elementGender.click();
+    }
+
+    public StudentLombok createStudentFromPage() {
+        return StudentLombok.builder()
+                .name(modalBodyNameLastName.getText().split(" ")[0])
+                .lastName(modalBodyNameLastName.getText().split(" ")[1])
+                .email(modalBodyEmail.getText())
+                .gender(returnGenderFromPage(modalBodyGender))
+                .mobile(modalBodyMobile.getText())
+                .dateOfBirth(modalBodyDateOfBirth.getText())
+                .subjects(modalBodySubjects.getText())
+                .currentAddress(modalBodyAddress.getText())
+                .state(returnState(modalBodyStateCity))
+                .city(returnCity(modalBodyStateCity))
+                .build();
+    }
+
+    private String returnState(WebElement element){
+        String[] arrayStr = element.getText().split(" ");
+        if(arrayStr.length == 2){
+            return arrayStr[0];
+        }else if (arrayStr.length ==3){
+            return (arrayStr[0]+" "+arrayStr[1]);
+        }else
+            return null;
+    }
+    private String returnCity(WebElement element){
+        String[] arrayStr = element.getText().split(" ");
+        if(arrayStr.length == 2){
+            return arrayStr[1];
+        }else if (arrayStr.length ==3){
+            return arrayStr[2];
+        }else
+            return null;
+    }
+    private Gender returnGenderFromPage(WebElement elementGender) {
+        String strGender = elementGender.getText();
+        switch (strGender) {
+            case "Male": {
+                return Gender.MALE;
+            }
+            case "Female": {
+                return Gender.FEMALE;
+            }
+            case "Other": {
+                return Gender.OTHER;
+            }
+        }
+        return null;
     }
 }
